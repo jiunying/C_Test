@@ -11,7 +11,7 @@ void fun(int a, int b)
     }
     if(a>9)
         return;
-    printf("%02dx%02d=%02d  ", a, b, a*b);
+    printf("%02dx%02d=%02d\n", a, b, a*b);
     count++;
 
     fun(a, b+1);
