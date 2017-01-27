@@ -23,8 +23,12 @@ int hammingDistance(int x, int y)
 
 int main(void)
 {
-    int n;
-    n = hammingDistance(1, 2);
-    printf("%d\n", n);
+    int n, x, y;
+    printf("Please Enter the First Number: ");
+    scanf("%d", &x);
+    printf("Please Enter the Second Number: ");
+    scanf("%d", &y);
+    n = hammingDistance(x, y);
+    printf("The Hamming Distance is: %d\n", n);
     return 0;
 }
