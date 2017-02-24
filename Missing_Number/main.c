@@ -1,7 +1,9 @@
 #include <stdio.h>
 
+
 int missingNumber(int* nums, int numsSize) 
 {
+#if 0
     int sum = numsSize;
     int i;
     for(i = 0; i < numsSize; ++i)
@@ -9,6 +11,14 @@ int missingNumber(int* nums, int numsSize)
         sum += i - nums[i];
     }
     return sum;
+#endif
+    int xor = numsSize;
+    int i;
+    for(i = 0; i < numsSize; ++i)
+    {
+        xor ^= i ^ nums[i];
+    }
+    return xor;
 }
 
 int main()
